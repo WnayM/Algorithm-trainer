@@ -1,27 +1,18 @@
-from src.core.types import Problem, CheckResult
+from src.problems.arrays.toposort.problem import make_toposort_problem
 
-def test_check_cycle():
-    def check_fn(user_text: str) -> CheckResult:
+def test_toposort_correct_answer():
+    p = make_toposort_problem()
+    res = p.check_fn("A B C E D")
+    assert res.is_correct is True
 
-        got = user_text.strip()
 
-        expected = "4"
+def test_toposort_edge_violation():
+    p = make_toposort_problem()
+    res = p.check_fn("C A B D E")
+    assert res.is_correct is False
 
-        ok = (got == expected)
 
-        return CheckResult(is_correct = ok, expected = expected, got = got )
-
-    p = Problem(
-        prompt = "2 + 2 = ?",
-        expected = "4",
-        check_fn = check_fn
-    )
-
-    res_ok = p.check_fn("4")
-    assert res_ok.is_correct is True
-
-    res_bad = p.check_fn("5")
-    assert res_bad.is_correct is False
-    assert res_bad.expected == "4"
-    assert res_bad.got == "5"
-
+def test_toposort_missing_node():
+    p = make_toposort_problem()
+    res = p.check_fn("A B C D") 
+    assert res.is_correct is False
