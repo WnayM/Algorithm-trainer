@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: algorithm-trainer
+Version: 0.1.0
+Summary: Algorithms Trainer (CLI): generate tasks, check answers, and track progress.
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: ruff>=0.5; extra == "dev"
+
+# Algorithm-trainer
+
+Title: Algorithms Trainer (CLI)
+What: Generate interview-style tasks, submit answers, track progress
+Features: Topics, random tasks, answer checker, stats, export
+Install: pip install -e .
+Run: algotrainer topics, algotrainer new dijkstra
+Dev: pytest, ruff
+Roadmap: list topics + upcoming

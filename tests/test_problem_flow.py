@@ -1,4 +1,4 @@
-from src.problems.arrays.toposort.problem import make_toposort_problem
+from src.problems.graphs.arrays.toposort.problem import make_toposort_problem
 
 def test_toposort_correct_answer():
     p = make_toposort_problem()

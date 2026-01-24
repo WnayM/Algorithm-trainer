@@ -1,0 +1,2 @@
+[console_scripts]
+algotrainer = src.algtrainer.cli:main

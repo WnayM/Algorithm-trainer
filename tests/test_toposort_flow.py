@@ -2,11 +2,11 @@ from src.core.types import Problem, CheckResult
 
 def test_check_cycle():
     def check_fn(user_text: str) -> CheckResult:
-    got = user_text.strip()
-    expected = "4"
-    ok = (got == expected)
+        got = user_text.strip()
+        expected = "4"
+        ok = (got == expected)
 
-    return CheckResult(is_correct = ok, expected = expected, got = got )
+        return CheckResult(is_correct = ok, expected = expected, got = got )
 
     p = Problem(
         prompt = "2 + 2 = ?",
