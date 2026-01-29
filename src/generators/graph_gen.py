@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from random import Random 
-from typing import list, Tuple
+
 
 def generate_dag(n : int, edge_prob: float, seed : int | None = None ) -> tuple[list[str], list[tuple[str, str]]]:
     if n < 2:
